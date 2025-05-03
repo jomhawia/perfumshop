@@ -1,0 +1,15 @@
+.button-transform {
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  font-size: 100px;
+  padding: 0%;
+  visibility: hidden;
+}
+.left-button {
+  top: 30%;
+}
+.right-button {
+  top: 30%;
+  right: 0;
+}
