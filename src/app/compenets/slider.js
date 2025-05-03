@@ -56,7 +56,7 @@ function Slide({ slide, direction }) {
       exit="exit"
       transition={{ duration: 0.5 }}
       style={{
-        background: "red",
+        background: "#A9A9A9",
         padding: "2rem",
         paddingLeft: "100px",
         paddingTop: "100px",
