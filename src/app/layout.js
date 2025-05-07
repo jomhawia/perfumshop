@@ -3,6 +3,8 @@ import * as React from "react";
 import "./globals.css";
 import Header from "./compenets/header";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Footer from "./compenets/Footer";
+import Container from "@mui/material/Container";
 
 const theme = createTheme({
   palette: {
@@ -25,10 +27,13 @@ const theme = createTheme({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-100 ">
         <ThemeProvider theme={theme}>
           <Header />
-          {children}
+          <Container maxWidth="x-lg" className="bg-white">
+            {children}
+          </Container>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

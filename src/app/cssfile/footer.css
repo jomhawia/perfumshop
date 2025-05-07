@@ -1,0 +1,13 @@
+p {
+  font-family: "Arial, sans-serif";
+  margin: 0;
+  padding: 10px 0;
+}
+p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p:hover::before {
+  content: "// ";
+}
