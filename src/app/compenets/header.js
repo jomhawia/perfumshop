@@ -3,6 +3,7 @@
 import * as React from "react";
 import "../globals.css";
 import "../cssfile/header.css";
+import Menu from "./Menu";
 import TextField from "@mui/material/TextField";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -12,8 +13,11 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export default function Header() {
   return (
-    <>
-      <div className="header" style={{ marginTop: "10px" }}>
+    <div className="grid grid-cols-1 grid-rows-1">
+      <div
+        className="header flex justify-center items-center "
+        style={{ marginTop: "10px" }}
+      >
         <div style={{ marginLeft: "100px", fontWeight: "900" }}>
           <img
             src="/image/perfumelogo-removebg-preview.png"
@@ -32,46 +36,60 @@ export default function Header() {
             marginLeft: "100px",
           }}
         >
-          <LocalPhoneOutlinedIcon />
-          <p
-            style={{
-              padding: "10px",
-              marginRight: "40px",
-              fontWeight: "700",
-            }}
-          >
-            phone <br />
-            <a href="tel:0787399416" style={{ textDecoration: "none" }}>
-              0787399416
-            </a>
-          </p>
+          <div className="phoneHeader flex justify-center items-center">
+            <LocalPhoneOutlinedIcon />
+            <p
+              style={{
+                padding: "10px",
+                marginRight: "40px",
+                fontWeight: "700",
+              }}
+            >
+              phone <br />
+              <a href="tel:0787399416" style={{ textDecoration: "none" }}>
+                0787399416
+              </a>
+            </p>
+          </div>
 
-          <TextField
-            style={{
-              width: "600px",
-              marginRight: "20px",
-            }}
-            label="Search Our Store"
-            slotProps={{
-              input: {
-                type: "search",
-                style: {
-                  borderRadius: "50px",
+          <div className="searchHeader">
+            <TextField
+              id="outlined-basic"
+              style={{
+                marginRight: "20px",
+              }}
+              label="Search Our Store"
+              slotProps={{
+                input: {
+                  type: "search",
+                  style: {
+                    borderRadius: "50px",
+                  },
                 },
-              },
-            }}
-          />
-          <SearchIcon
-            style={{ position: "relative", left: "-60px", zIndex: 1 }}
-          />
+              }}
+            />
+          </div>
         </div>
         <div
+          className="cart"
           style={{
             marginRight: "100px",
             display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <div>
+            <a href="/login">
+              <SearchIcon
+                className="searchIcon"
+                style={{
+                  marginTop: "10px",
+                  marginRight: "20px",
+                  display: "none",
+                }}
+              />
+            </a>
             <a href="/login">
               <PersonOutlineOutlinedIcon
                 style={{ marginTop: "10px", marginRight: "20px" }}
@@ -92,10 +110,11 @@ export default function Header() {
           </a>
         </div>
       </div>
-      <hr style={{ marginTop: "5px", color: "#eeeeee" }} />
+      <hr style={{ color: "#eeeeee" }} />
+      {/* <Menu /> */}
       <div
         style={{
-          marginTop: "5px",
+          marginTop: "0px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -156,6 +175,6 @@ export default function Header() {
           CONTACT
         </Button>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,10 +1,42 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin-top: 20px;
+@media screen and (max-width: 1200px) {
+  .phoneHeader {
+    display: none;
+  }
+  #outlined-basic {
+    max-width: 250px;
+  }
+  .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
 }
+#outlined-basic {
+  display: inline-block;
+  width: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+  .searchHeader {
+    display: none;
+  }
+  .searchIcon {
+    display: block;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
 .Button {
   background-color: #4caf50;
   color: white;
