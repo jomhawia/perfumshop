@@ -3,11 +3,11 @@ p {
   margin: 0;
   padding: 10px 0;
 }
-p:hover {
+/* p:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 p:hover::before {
   content: "// ";
-}
+} */

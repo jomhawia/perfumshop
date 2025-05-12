@@ -13,3 +13,27 @@
   top: 30%;
   right: 0;
 }
+.imageInSlider {
+  display: block;
+}
+@media screen and (max-width: 1200px) {
+  .imageInSlider {
+    display: none;
+  }
+}
+/* @media screen and (max-width: 1000px) {
+  .streak {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+  }
+} */
+@media screen and (max-width: 768px) {
+  .streak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-around;
+  }
+}

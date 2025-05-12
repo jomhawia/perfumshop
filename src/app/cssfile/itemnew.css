@@ -6,3 +6,10 @@
 .newitem {
   background-size: cover;
 }
+
+@media screen and (max-width: 1200px) {
+  .newItem {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}

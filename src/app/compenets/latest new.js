@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 
 export default function Latestnew({ imageUrl, auther, title, date }) {
   return (
-    <Card sx={{ maxWidth: 345 }} style={{}}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
         image="/image/DOLCE-removebg-preview.png"

@@ -94,6 +94,7 @@ function Slide({ slide, direction }) {
       </button>
 
       <img
+        className="imageInSlider"
         src={slide.image}
         alt={slide.title}
         style={{
@@ -101,10 +102,8 @@ function Slide({ slide, direction }) {
           height: "300px",
           position: "absolute",
           right: "300px",
-
           transform: "translateY(-50%)",
           top: "50%",
-
           zIndex: "0",
         }}
       />
@@ -126,15 +125,8 @@ export default function Slider() {
     });
   };
   return (
-    <>
-      <div
-        className="button-container"
-        style={{
-          height: "450px",
-          position: "relative",
-          zIndex: "0",
-        }}
-      >
+    <div className="button-container flex flex-col justify-center align-middle gap-10">
+      <div>
         <AnimatePresence mode="wait" custom={direction}>
           <Slide
             key={sliders[index].id}
@@ -154,50 +146,78 @@ export default function Slider() {
         >
           →
         </button>
+      </div>
 
-        <Container
-          sx={{ bgcolor: "white", height: "120px" }}
+      <Container
+        className="streak flex justify-around align-middl border-1 justify-items-center"
+        sx={{
+          bgcolor: "white",
+          alignItems: "center",
+          padding: "30px",
+          background: "white",
+        }}
+      >
+        <div
+          className="item1"
           style={{
-            position: "absolute",
-            left: "0",
-            right: "0",
-            top: "390px",
-            border: "1px solid #eeeeee",
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-evenly",
-            zIndex: "2",
+            gap: "20px",
+            padding: "10px",
+            width: "300px",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <LocalShippingOutlinedIcon
-              style={{ marginRight: "20px", scale: "2" }}
-            />
-            Free Shipping
-            <br />
-            On all orders over $49.00
-          </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <RequestQuoteOutlinedIcon
-              style={{ marginRight: "20px", scale: "2" }}
-            />
-            15 days returns <br />
-            OMoneyback guarantee
-          </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <CreditCardOutlinedIcon
-              style={{ marginRight: "20px", scale: "2" }}
-            />
-            Secure checkout <br />
-            Protected by Paypal{" "}
-          </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <RedeemOutlinedIcon style={{ marginRight: "20px", scale: "2" }} />
-            Offer & gift here <br />
-            On all orders over{" "}
-          </div>
-        </Container>
-      </div>
-    </>
+          <LocalShippingOutlinedIcon
+            style={{
+              scale: "2",
+            }}
+          />
+          Free Shipping
+          <br />
+          On all orders over $49.00
+        </div>
+        <div
+          className="item2"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "20px",
+            padding: "10px",
+            width: "300px",
+          }}
+        >
+          <RequestQuoteOutlinedIcon style={{ scale: "2" }} />
+          15 days returns <br />
+          OMoneyback guarantee
+        </div>
+        <div
+          className="item3"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "20px",
+            padding: "10px",
+            width: "300px",
+          }}
+        >
+          <CreditCardOutlinedIcon style={{ scale: "2" }} />
+          Secure checkout <br />
+          Protected by Paypal
+        </div>
+        <div
+          className="item4"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "20px",
+            padding: "10px",
+            width: "300px",
+          }}
+        >
+          <RedeemOutlinedIcon style={{ scale: "2" }} />
+          Offer & gift here <br /> On all orders over
+        </div>
+      </Container>
+    </div>
   );
 }

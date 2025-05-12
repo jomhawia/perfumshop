@@ -32,7 +32,7 @@ const latestNews = [
 ];
 
 const LatestNewsItem = latestNews.map((news) => (
-  <SwiperSlide>
+  <SwiperSlide className="SwiperSlide" style={{ display: "block" }}>
     <LatestNew
       key={news.id}
       imageUrl={news.imageUrl}

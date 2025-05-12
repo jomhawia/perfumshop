@@ -30,10 +30,10 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-100 ">
         <ThemeProvider theme={theme}>
           <Header />
-          <Container maxWidth="x-lg" className="bg-white">
+          <Container maxWidth="x-lg" className="bg-white contanr">
             {children}
           </Container>
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>

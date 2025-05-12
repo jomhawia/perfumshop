@@ -3,6 +3,7 @@
 import { useState } from "react";
 import "/src/app/globals.css";
 import "/src/app/cssfile/itemnew.css";
+import "../cssfile/itemnew.css";
 
 export default function Itemnew() {
   const [itemstate, setItem] = useState([
@@ -72,14 +73,13 @@ export default function Itemnew() {
       <div className="newitem" key={item.id}>
         <div
           style={{
-            width: "300px",
-            height: "300px",
+            width: "250px",
+            height: "250px",
             backgroundColor: "#A9A9A9",
             backgroundImage: `url(${item.image})`,
             backgroundPosition: "right bottom",
-            backgroundSize: "300px 300px",
+            backgroundSize: "250px 250px",
             backgroundRepeat: "no-repeat",
-
             borderRadius: "10px",
             cursor: "pointer",
             transition: "transform 0.3s ease",
@@ -90,7 +90,6 @@ export default function Itemnew() {
             style={{
               fontSize: "20px",
               fontWeight: "bold",
-              marginTop: "10px",
               color: "#333",
               textAlign: "center",
             }}
@@ -131,12 +130,8 @@ export default function Itemnew() {
         />
       </h1>
       <div
-        className="grid grid-cols-4 grid-rows-2 gap-5"
-        style={{
-          marginTop: "100px",
-          marginLeft: "100px",
-          marginRight: "100px",
-        }}
+        className="newItem grid grid-cols-4 grid-rows-2 gap-5"
+        style={{ marginTop: "50px" }}
       >
         {items}
       </div>
