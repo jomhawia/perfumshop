@@ -18,14 +18,12 @@ export default function Header() {
         className="header flex justify-center items-center "
         style={{ marginTop: "10px" }}
       >
-        <div style={{ marginLeft: "100px", fontWeight: "900" }}>
-          <img
-            src="/image/perfumelogo-removebg-preview.png"
-            alt="logo"
-            width="100px"
-            height="100px"
-          />
-        </div>
+        <img
+          src="/image/perfumelogo-removebg-preview.png"
+          alt="logo"
+          width="100px"
+          height="100px"
+        />
         <div
           className="searchandphone"
           style={{

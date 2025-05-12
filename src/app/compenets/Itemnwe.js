@@ -73,7 +73,7 @@ export default function Itemnew() {
       <div className="newitem" key={item.id}>
         <div
           style={{
-            width: "250px",
+            maxWidth: "250px",
             height: "250px",
             backgroundColor: "#A9A9A9",
             backgroundImage: `url(${item.image})`,
