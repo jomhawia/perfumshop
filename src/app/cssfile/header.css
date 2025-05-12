@@ -21,13 +21,7 @@
   .searchHeader {
     display: none;
   }
-  .headerButton {
-    display: none;
-    background-color: #4caf50;
-  }
-  .searchIcon {
-    display: block;
-  }
+
   .header {
     display: flex;
     align-items: center;

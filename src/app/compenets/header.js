@@ -13,7 +13,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 export default function Header() {
   return (
-    <div className="grid grid-cols-1 grid-rows-1">
+    <div>
       <div
         className="header flex justify-center items-center "
         style={{ marginTop: "10px" }}
@@ -39,7 +39,6 @@ export default function Header() {
             <p
               style={{
                 padding: "10px",
-                marginRight: "40px",
                 fontWeight: "700",
               }}
             >
@@ -71,35 +70,24 @@ export default function Header() {
         <div
           className="cart"
           style={{
-            marginRight: "100px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            gap: "10px",
           }}
         >
-          <div>
-            <a href="/login">
-              <SearchIcon
-                className="searchIcon"
-                style={{
-                  marginTop: "10px",
-                  marginRight: "20px",
-                  display: "none",
-                }}
-              />
-            </a>
-            <a href="/login">
-              <PersonOutlineOutlinedIcon
-                style={{ marginTop: "10px", marginRight: "20px" }}
-              />
-            </a>
-            <a href="/login">
-              <ShoppingCartOutlinedIcon
-                style={{ marginTop: "10px", marginRight: "20px" }}
-              />
-            </a>
-          </div>
-          <a href="/login" style={{ textDecoration: "none" }}>
+          <SearchIcon
+            sx={{
+              display: { xs: "block", md: "none" },
+            }}
+          />
+          <a href="/login">
+            <PersonOutlineOutlinedIcon />
+          </a>
+          <a href="/login">
+            <ShoppingCartOutlinedIcon />
+          </a>
+          <a href="/login">
             <p>
               your cart
               <br />
@@ -111,10 +99,8 @@ export default function Header() {
       <hr style={{ color: "#eeeeee" }} />
       {/* <Menu /> */}
       <div
-        className="headerButton"
+        className="headerButton hidden md:flex"
         style={{
-          marginTop: "0px",
-          display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }}
