@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "./compenets/header";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Footer from "./compenets/Footer";
-import Container from "@mui/material/Container";
 
 const theme = createTheme({
   palette: {
@@ -30,9 +29,7 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-100 ">
         <ThemeProvider theme={theme}>
           <Header />
-          <Container maxWidth="x-lg" className="bg-white contanr">
-            {children}
-          </Container>
+          {children}
           {/* <Footer /> */}
         </ThemeProvider>
       </body>

@@ -10,6 +10,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -132,15 +133,17 @@ export default function Header() {
         >
           SHOP
         </Button>
-        <Button
-          className="Button"
-          style={{
-            margin: "10px",
-            color: "#000",
-          }}
-        >
-          PRODUCT
-        </Button>
+        <Link href={`/products`}>
+          <Button
+            className="Button"
+            style={{
+              margin: "10px",
+              color: "#000",
+            }}
+          >
+            PRODUCT
+          </Button>
+        </Link>
         <Button
           className="Button"
           style={{

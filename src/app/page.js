@@ -2,6 +2,8 @@
 import "./globals.css";
 import Slider from "./compenets/slider";
 import Itemnew from "./compenets/Itemnwe";
+import Container from "@mui/material/Container";
+
 import LatestNews from "./compenets/latest news";
 
 export default function Home() {
@@ -9,8 +11,11 @@ export default function Home() {
     <>
       <div>
         <Slider />
-        <Itemnew />
-        {/* <LatestNews /> */}
+
+        <Container>
+          <Itemnew />
+          {/* <LatestNews /> */}
+        </Container>
       </div>
     </>
   );
