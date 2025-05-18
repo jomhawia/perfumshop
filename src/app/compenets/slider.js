@@ -11,7 +11,7 @@ import RedeemOutlinedIcon from "@mui/icons-material/RedeemOutlined";
 const sliders = [
   {
     id: 1,
-    image: "/image/blue_chanel-removebg-preview.png",
+    image: "/image/perfume/blue_chanel-removebg-preview.png",
     background: "#b28900",
     title: "SAUVAGE",
     description: "Fresh, bold fragrance with citrus and amber notes.",
