@@ -12,7 +12,7 @@ export default function Itemnew() {
       name: "ARMANI",
       price: "$150",
       baeckgroundColor: "white",
-      image: "/image/ARMANI-removebg-preview.png",
+      image: "/image/perfume/ARMANI-removebg-preview.png",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export default function Itemnew() {
       price: "$220",
       baeckgroundColor: "white",
 
-      image: "/image/BOWMORE-removebg-preview.png",
+      image: "/image/perfume/BOWMORE-removebg-preview.png",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function Itemnew() {
       price: "$330",
       baeckgroundColor: "white",
 
-      image: "/image/DOLCE-removebg-preview.png",
+      image: "/image/perfume/DOLCE-removebg-preview.png",
     },
     {
       id: 4,
@@ -36,35 +36,35 @@ export default function Itemnew() {
       price: "$130",
       baeckgroundColor: "white",
 
-      image: "/image/KAAL-removebg-preview.png",
+      image: "/image/perfume/KAAL-removebg-preview.png",
     },
     {
       id: 5,
       name: "Prageesh",
       price: "$180",
       baeckgroundColor: "white",
-      image: "/image/Prageesh-removebg-preview.png",
+      image: "/image/perfume/Prageesh-removebg-preview.png",
     },
     {
       id: 6,
       name: "REBERT",
       price: "$80",
       baeckgroundColor: "white",
-      image: "/image/rebert-removebg-preview.png",
+      image: "/image/perfume/rebert-removebg-preview.png",
     },
     {
       id: 7,
       name: "YOU",
       price: "$100",
       baeckgroundColor: "white",
-      image: "/image/YOU-removebg-preview.png",
+      image: "/image/perfume/YOU-removebg-preview.png",
     },
     {
       id: 8,
       name: "SAUVAGE",
       price: "$300",
       baeckgroundColor: "white",
-      image: "/image/SAUVAGE-removebg-preview.png",
+      image: "/image/perfume/SAUVAGE-removebg-preview.png",
     },
   ]);
 
