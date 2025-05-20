@@ -33,7 +33,8 @@ export default function CompletBody() {
         </ButtonGroup>
       </div>
       <hr />
-      <div>{data}</div>
+      {/* <div>{data}</div> */}
+      <Review />
     </div>
   );
 }

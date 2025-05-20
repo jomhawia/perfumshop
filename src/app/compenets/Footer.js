@@ -7,8 +7,8 @@ import "../globals.css";
 export default function Footer() {
   return (
     <div
-      className="footer flex flex-col bg-gray-200"
-      style={{ marginTop: "auto" }}
+      className="footer flex flex-col"
+      style={{ marginTop: "auto", backgroundColor: "#e0e0e0" }}
     >
       <Container maxWidth="x-lg" className="bd">
         <div className="footer-content grid grid-cols-5 gap-4 p-4 ">

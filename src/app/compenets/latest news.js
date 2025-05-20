@@ -9,25 +9,25 @@ const latestNews = [
     id: 1,
     auther: "Latest News",
     title: "Stay updated with the latest news and trends in the industry.",
-    imageUrl: "image/blue_chanel-removebg-preview.png",
+    imageUrl: "/image/perfume/OUD-removebg-preview.png",
   },
   {
     id: 2,
     auther: "Breaking News",
     title: "Get the latest breaking news from around the world.",
-    imageUrl: "image/blue_chanel-removebg-preview.png",
+    imageUrl: "/image/perfume/DOLCE-removebg-preview.png",
   },
   {
     id: 3,
     auther: "Technology Updates",
     title: "Discover the latest advancements in technology ahmad.",
-    imageUrl: "image/blue_chanel-removebg-preview.png",
+    imageUrl: "/image/perfume/BOWMORE-removebg-preview.png",
   },
   {
     id: 4,
     auther: "ahmad jomhawi",
     title: "Discover the latest advancements in technology ahmad.",
-    imageUrl: "image/blue_chanel-removebg-preview.png",
+    imageUrl: "/image/perfume/blue_chanel-removebg-preview.png",
   },
 ];
 
@@ -60,6 +60,14 @@ export default function LatestNews() {
       </h1>
       <hr style={{ width: "11%", margin: "0px auto" }} />
       <div className="px-4 py-8">
+        <style>
+          {`
+            .swiper-button-next,
+            .swiper-button-prev {
+              color: #e0e0e0 !important; /* Change this to your desired color */
+            }
+          `}
+        </style>
         <Swiper
           modules={[Navigation]}
           navigation

@@ -8,7 +8,7 @@ import Footer from "./compenets/Footer";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#A9A9A9",
+      main: "#F4F4F4",
     },
     secondary: {
       main: "#b28900",
@@ -26,11 +26,14 @@ const theme = createTheme({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 ">
+      <body
+        className=""
+        style={{ backgroundColor: "#F9F9F9", color: "#1C1C1C" }}
+      >
         <ThemeProvider theme={theme}>
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

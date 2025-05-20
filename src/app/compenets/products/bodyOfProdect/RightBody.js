@@ -9,7 +9,9 @@ export default function RightBody() {
       <div className="flex gap-2 justify-start align-bottom items-end">
         <p className="text-2xl">$19.00</p>
         <p className="line-through">$21.00</p>
-        <p className="bg-gray-300">Save -10%</p>
+        <p className="" style={{ backgroundColor: "#e0e0e0" }}>
+          Save -10%
+        </p>
       </div>
       <div>
         Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.

@@ -106,15 +106,17 @@ export default function Header() {
           alignItems: "center",
         }}
       >
-        <Button
-          className="Button"
-          style={{
-            margin: "10px",
-            color: "#000",
-          }}
-        >
-          HOME
-        </Button>
+        <Link href={`/`}>
+          <Button
+            className="Button"
+            style={{
+              margin: "10px",
+              color: "#000",
+            }}
+          >
+            HOME
+          </Button>
+        </Link>
         <Button
           className="Button"
           style={{

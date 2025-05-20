@@ -11,10 +11,9 @@ export default function Home() {
     <>
       <div>
         <Slider />
-
         <Container>
           <Itemnew />
-          {/* <LatestNews /> */}
+          <LatestNews />
         </Container>
       </div>
     </>

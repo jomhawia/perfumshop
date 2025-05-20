@@ -12,7 +12,7 @@ const sliders = [
   {
     id: 1,
     image: "/image/perfume/blue_chanel-removebg-preview.png",
-    background: "#b28900",
+    background: "#F4F4F4",
     title: "SAUVAGE",
     description: "Fresh, bold fragrance with citrus and amber notes.",
     detail: "long-lasting scent, perfect for day and night wear.",
@@ -20,7 +20,7 @@ const sliders = [
   {
     id: 2,
     image: "/image/OUD-removebg-preview.png",
-    background: "#33eaff",
+    background: "#F4F4F4",
     title: "OUD",
     description: "Deep, woody scent perfect for evening wear.",
     detail: "long-lasting scent, perfect for day and night wear.",
@@ -56,7 +56,7 @@ function Slide({ slide, direction }) {
       exit="exit"
       transition={{ duration: 0.5 }}
       style={{
-        background: "#A9A9A9",
+        background: "#e0e0e0",
         padding: "2rem",
         paddingLeft: "100px",
         paddingTop: "100px",
@@ -72,7 +72,7 @@ function Slide({ slide, direction }) {
       <button
         style={{
           background: "white",
-          color: "#000",
+          color: "#005577 ",
           border: "none",
           padding: "10px 20px",
           borderRadius: "5px",
