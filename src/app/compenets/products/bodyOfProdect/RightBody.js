@@ -1,23 +1,25 @@
+"use client";
 import Button from "@mui/material/Button";
+import { useContext } from "react";
+import { ProductContext } from "@/app/ProdectContext";
+import AlertCart from "./AlertCart";
 
-export default function RightBody() {
+export default function RightBody({ count, setCount }) {
+  const products = useContext(ProductContext);
   return (
     <div className="flex flex-col gap-2">
       <div className="font-bold text-2xl">
-        J. l p t Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc.
+        {products[count].title} : {products[count].description}{" "}
       </div>
       <div className="flex gap-2 justify-start align-bottom items-end">
-        <p className="text-2xl">$19.00</p>
+        <p className="text-2xl">{products[count].price}</p>
         <p className="line-through">$21.00</p>
         <p className="" style={{ backgroundColor: "#e0e0e0" }}>
           Save -10%
         </p>
       </div>
       <div>
-        Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.
-        Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc
-        nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean
-        ut eros et nisl sagittis vestibulum. Nullam...
+        <p className="text-2xl">{products[count].detail}</p>
       </div>
       <hr />
       <div className="flex flex-col gap-0">
@@ -32,8 +34,13 @@ export default function RightBody() {
           <input type="text" className="w-15" />
           <div>+</div>
         </div>
-        <Button className="w-30">Add to cart</Button>
-        <Button className="w-30">Buy it now</Button>
+        <AlertCart count={count} />{" "}
+        <Button
+          className="w-30"
+          style={{ color: "black", border: "1px solid black" }}
+        >
+          Buy it now
+        </Button>
         <p className="w-30">Add to wishlist</p>
         <p className="w-30">Compare</p>
         <p className="w-30">Ask about this product</p>

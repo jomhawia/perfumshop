@@ -1,63 +1,56 @@
 "use client";
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
 
-const images = [
-  { id: 0, src: "/image/perfume/OUD-removebg-preview.png" },
-  { id: 1, src: "/image/perfume/SAUVAGE-removebg-preview.png" },
-  { id: 2, src: "/image/perfume/YOU-removebg-preview.png" },
-  { id: 3, src: "/image/perfume/blue_chanel-removebg-preview.png" },
-];
+import { ProductContext } from "@/app/ProdectContext";
+import { useContext } from "react";
 
-export default function LeftBody() {
-  const [count, setCount] = useState(0);
+export default function LeftBody({ count, setCount }) {
+  const products = useContext(ProductContext);
+
+  console.log(count);
 
   function handleClickLeft() {
     if (count == 0) {
-      setCount(3);
+      setCount(products.length - 1);
     } else {
       setCount(count - 1);
     }
   }
   function handleClickRight() {
-    if (count == 3) {
+    if (count == products.length - 1) {
       setCount(0);
     } else {
       setCount(count + 1);
     }
   }
-  console.log(count);
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-4 ">
       <div
         className="col-span-4"
         style={{ height: "500px", backgroundColor: "#e0e0e0" }}
       >
         <img
           className="justify-self-center align-middle"
-          src={images[count].src}
+          src={products[count].src}
           style={{ height: "400px", backgroundSize: "contain" }}
         />
       </div>
 
-      {images.map((image) => (
+      {products.map((product) => (
         <div
-          className=" max-h-48 cursor-pointer flex justify-center items-center"
-          key={image.id}
+          className=" max-h-48 cursor-pointer flex justify-center items-center bg-size-contain bg-no-repeat bg-center"
+          key={product.id}
           style={{
             backgroundColor: "#e0e0e0",
-            border: image.id === count ? "solid 2px black" : "",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+            border: product.id === count ? "solid 2px black" : "",
+
+            display:
+              product.id > count + 3 || product.id < count ? "none" : "block",
           }}
-          onClick={() => setCount(image.id)}
+          onClick={() => setCount(product.id)}
         >
-          <img src={image.src} className="" style={{}} />
+          <img src={product.src} />
         </div>
       ))}
       <div className="flex gap-2 col-span-4">

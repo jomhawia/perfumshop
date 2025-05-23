@@ -5,20 +5,22 @@ import RightBody from "../compenets/products/bodyOfProdect/RightBody";
 import CompletBody from "../compenets/products/bodyOfProdect/CompletBody";
 import Container from "@mui/material/Container";
 import LatestNews from "../compenets/latest news";
+import { useState } from "react";
 
 export default function Prodect() {
+  const [count, setCount] = useState(0);
   return (
     <div>
       <div>
         <HeaderOfProdect />
       </div>
       <Container>
-        <div className="lg:flex gap-10 mt-20 md:flex-row">
-          <div>
-            <LeftBody />
+        <div className="flex gap-10 mt-20">
+          <div className="w-1/2">
+            <LeftBody count={count} setCount={setCount} />
           </div>
-          <div>
-            <RightBody />
+          <div className="w-1/2">
+            <RightBody count={count} setCount={setCount} />
           </div>
         </div>
         <div>

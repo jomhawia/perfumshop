@@ -7,25 +7,9 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 import RequestQuoteOutlinedIcon from "@mui/icons-material/RequestQuoteOutlined";
 import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
 import RedeemOutlinedIcon from "@mui/icons-material/RedeemOutlined";
+import { useContext } from "react";
 
-const sliders = [
-  {
-    id: 1,
-    image: "/image/perfume/blue_chanel-removebg-preview.png",
-    background: "#F4F4F4",
-    title: "SAUVAGE",
-    description: "Fresh, bold fragrance with citrus and amber notes.",
-    detail: "long-lasting scent, perfect for day and night wear.",
-  },
-  {
-    id: 2,
-    image: "/image/OUD-removebg-preview.png",
-    background: "#F4F4F4",
-    title: "OUD",
-    description: "Deep, woody scent perfect for evening wear.",
-    detail: "long-lasting scent, perfect for day and night wear.",
-  },
-];
+import { ProductContext } from "../ProdectContext";
 
 // Animation variants
 const variants = {
@@ -95,7 +79,7 @@ function Slide({ slide, direction }) {
 
       <img
         className="imageInSlider"
-        src={slide.image}
+        src={slide.src}
         alt={slide.title}
         style={{
           width: "300px",
@@ -112,15 +96,16 @@ function Slide({ slide, direction }) {
 }
 
 export default function Slider() {
+  const products = useContext(ProductContext);
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState("right");
   const handleChange = (dir) => {
     setDirection(dir);
     setIndex((prev) => {
       if (dir === "left") {
-        return prev === 0 ? sliders.length - 1 : prev - 1;
+        return prev === 0 ? products.length - 1 : prev - 1;
       } else {
-        return prev === sliders.length - 1 ? 0 : prev + 1;
+        return prev === products.length - 1 ? 0 : prev + 1;
       }
     });
   };
@@ -129,8 +114,8 @@ export default function Slider() {
       <div>
         <AnimatePresence mode="wait" custom={direction}>
           <Slide
-            key={sliders[index].id}
-            slide={sliders[index]}
+            key={products[index].id}
+            slide={products[index]}
             direction={direction}
           />
         </AnimatePresence>

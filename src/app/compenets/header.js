@@ -11,6 +11,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
+import RightDrawer from "@/app/RightDrawer";
 
 export default function Header() {
   return (
@@ -88,13 +89,7 @@ export default function Header() {
           <a href="/login">
             <ShoppingCartOutlinedIcon />
           </a>
-          <a href="/login">
-            <p>
-              your cart
-              <br />
-              $0.00
-            </p>
-          </a>
+          <RightDrawer />
         </div>
       </div>
       <hr style={{ color: "#eeeeee" }} />

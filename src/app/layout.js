@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "./compenets/header";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Footer from "./compenets/Footer";
+import { ProductProvider } from "./ProdectContext";
+import { CartProvider } from "./CartsProdectContext";
 
 const theme = createTheme({
   palette: {
@@ -26,15 +28,16 @@ const theme = createTheme({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className=""
-        style={{ backgroundColor: "#F9F9F9", color: "#1C1C1C" }}
-      >
-        <ThemeProvider theme={theme}>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+      <body>
+        <ProductProvider>
+          <CartProvider>
+            <ThemeProvider theme={theme}>
+              <Header />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </CartProvider>
+        </ProductProvider>
       </body>
     </html>
   );
