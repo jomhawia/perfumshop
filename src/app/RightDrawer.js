@@ -3,18 +3,19 @@ import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-
+import ClearIcon from "@mui/icons-material/Clear";
 import { cartContext } from "./CartsProdectContext";
 import { useContext } from "react";
+import Link from "next/link";
 export default function RightDrawer() {
   const [state, setState] = React.useState(false);
-  const { cart } = useContext(cartContext);
+  const { cart, removeFromCart } = useContext(cartContext);
 
   const cartsList = cart.map((cart) => {
     return (
       <div key={cart.id} className="flex justify-center align-middle gap-3">
         <div
-          className=""
+          className="relative "
           style={{
             backgroundColor: "#e0e0e0",
             width: "220px",
@@ -32,6 +33,14 @@ export default function RightDrawer() {
           }}
         >
           <img src={cart.src} />
+          <ClearIcon
+            style={{ cursor: "pointer", color: "black" }}
+            onClick={() => removeFromCart(cart.id)}
+            className="absolute -top-2 -left-2
+            bg-white rounded-full p-1
+            hover:bg-gray-200 transition-colors duration-300"
+            fontSize="small"
+          />
         </div>
         <div>
           <div>{cart.description}</div>
@@ -44,16 +53,8 @@ export default function RightDrawer() {
     );
   });
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setState(!state);
+  const toggleDrawer = (open) => (event) => {
+    setState(open);
   };
 
   let Subtotal = 0;
@@ -78,7 +79,9 @@ export default function RightDrawer() {
           </div>
           <hr />
           <div className="flex justify-between align-middle">
-            <Button variant="contained">VIWE CART</Button>
+            <Link href={`/Carts`}>
+              <Button variant="contained">VIEW CART</Button>
+            </Link>
             <Button variant="contained">CHECHOUT</Button>
           </div>
         </div>
@@ -100,7 +103,6 @@ export default function RightDrawer() {
           anchor="right"
           open={state}
           onClose={toggleDrawer(false)}
-          onOpen={toggleDrawer(true)}
         >
           {list}
         </SwipeableDrawer>
