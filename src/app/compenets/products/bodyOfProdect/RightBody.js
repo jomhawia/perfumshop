@@ -8,13 +8,14 @@ export default function RightBody({ count, setCount }) {
   const products = useContext(ProductContext);
   return (
     <div className="flex flex-col gap-2">
-      <div className="font-bold text-2xl">
+      <div className="font-bold text-3xl">
         {products[count].title} : {products[count].description}{" "}
       </div>
-      <div className="flex gap-2 justify-start align-bottom items-end">
-        <p className="text-2xl">{products[count].price}</p>
+      <div className="flex gap-1 justify-start items-end">
+        <p className="text-2xl">Price:</p>
+        <p className="text-2xl">${products[count].price}</p>
         <p className="line-through">$21.00</p>
-        <p className="" style={{ backgroundColor: "#e0e0e0" }}>
+        <p className="" style={{ backgroundColor: "#f9f9f9" }}>
           Save -10%
         </p>
       </div>
@@ -22,10 +23,19 @@ export default function RightBody({ count, setCount }) {
         <p className="text-2xl">{products[count].detail}</p>
       </div>
       <hr />
-      <div className="flex flex-col gap-0">
-        <p>SKU: 1510</p>
-        <p>Vendor: Vendor J</p>
-        <p>Type: Type J</p>
+      <div className="flex flex-col gap-1">
+        <div className="flex gap-2">
+          <p>SKU:</p>
+          <p>1510</p>
+        </div>
+        <div className="flex gap-2">
+          <p>Vendor:</p>
+          <p>Vendor J</p>
+        </div>
+        <div className="flex gap-2">
+          <p>Type:</p>
+          <p>Type J</p>
+        </div>
       </div>
       <hr />
       <div className="grid grid-cols-3 gap-1">

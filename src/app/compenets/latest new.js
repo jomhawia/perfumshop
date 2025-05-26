@@ -6,37 +6,48 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export default function Latestnew({ imageUrl, auther, title, date }) {
+export default function Latestnew({ src, title, description, dateToAdd }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card
+      style={{
+        transition: "transform 0.3s ease",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        border: "1px solid #ddd",
+        borderRadius: "10px",
+      }}
+    >
       <CardMedia
-        style={{ backgroundSize: "contain", backgroundRepeat: "no-repeat" }}
-        sx={{ height: 140, backgroundsize: "50px 50px" }}
-        image={imageUrl}
+        style={{
+          height: "350px",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+        image={src}
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {auther}
+          {title}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          {title}
+          {description}
         </Typography>
       </CardContent>
       <hr />
 
-      <CardActions>
+      <CardActions style={{ backgroundColor: "#f8f8f8" }}>
         <div
           className="flex  gap-2 justify-between align-middle "
-          style={{ backgroundColor: "#e0e0e0", width: "100%" }}
+          style={{ width: "100%" }}
         >
           <Typography variant="body2" sx={{ color: "black" }}>
-            {date}
-            2023-10-01
+            {dateToAdd}
           </Typography>
           <Button
+            className="hover:bg-[#f8f8f8]"
             size="small"
-            style={{ backgroundColor: "#e0e0e0", color: "black" }}
+            style={{ color: "black" }}
           >
             Read More
           </Button>

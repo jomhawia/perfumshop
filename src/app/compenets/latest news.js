@@ -1,70 +1,45 @@
+"use client";
 import LatestNew from "./latest new";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
-const latestNews = [
-  {
-    id: 1,
-    auther: "Latest News",
-    title: "Stay updated with the latest news and trends in the industry.",
-    imageUrl: "/image/perfume/OUD-removebg-preview.png",
-  },
-  {
-    id: 2,
-    auther: "Breaking News",
-    title: "Get the latest breaking news from around the world.",
-    imageUrl: "/image/perfume/DOLCE-removebg-preview.png",
-  },
-  {
-    id: 3,
-    auther: "Technology Updates",
-    title: "Discover the latest advancements in technology ahmad.",
-    imageUrl: "/image/perfume/BOWMORE-removebg-preview.png",
-  },
-  {
-    id: 4,
-    auther: "ahmad jomhawi",
-    title: "Discover the latest advancements in technology ahmad.",
-    imageUrl: "/image/perfume/blue_chanel-removebg-preview.png",
-  },
-];
-
-const LatestNewsItem = latestNews.map((news) => (
-  <SwiperSlide className="SwiperSlide" style={{ display: "block" }}>
-    <LatestNew
-      key={news.id}
-      imageUrl={news.imageUrl}
-      auther={news.auther}
-      title={news.title}
-      date={news.date}
-    />
-  </SwiperSlide>
-));
+import { useContext } from "react";
+import { NewsContext } from "@/app/NewsContext";
 
 export default function LatestNews() {
+  const { news } = useContext(NewsContext);
+
+  const LatestNewsItem = news.map((item) => (
+    <SwiperSlide key={item.id}>
+      <LatestNew
+        src={item.src}
+        title={item.title}
+        description={item.description}
+        dateToAdd={item.dateToAdd}
+      />
+    </SwiperSlide>
+  ));
   return (
-    <div
-      className="flex flex-col justify-center align-middle gap-5 "
-      style={{}}
-    >
-      <h1
-        style={{
-          fontSize: "50px",
-          fontWeight: "bold",
-          margin: "10px auto 0px auto",
-        }}
-      >
-        Latest News
-      </h1>
-      <hr style={{ width: "11%", margin: "0px auto" }} />
+    <div className="flex flex-col justify-center align-middle gap-5 ">
+      <div className="flex flex-col justify-center align-middle items-center">
+        <h1
+          style={{
+            fontSize: "50px",
+            fontWeight: "bold",
+          }}
+        >
+          Latest News
+        </h1>
+        <hr style={{ width: "11%" }} />
+      </div>
       <div className="px-4 py-8">
         <style>
           {`
             .swiper-button-next,
             .swiper-button-prev {
               color: #e0e0e0 !important; /* Change this to your desired color */
+            
             }
           `}
         </style>
@@ -73,15 +48,13 @@ export default function LatestNews() {
           navigation
           loop={true}
           spaceBetween={20}
-          slidesPerView={1.2}
+          slidesPerView={1}
           breakpoints={{
-            768: { slidesPerView: 2.2 },
+            768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
         >
-          <div className="flex justify-center align-middle gap-5 flex-wrap items-center">
-            {LatestNewsItem}
-          </div>
+          {LatestNewsItem}
         </Swiper>
       </div>
     </div>

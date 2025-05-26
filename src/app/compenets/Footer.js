@@ -8,7 +8,13 @@ export default function Footer() {
   return (
     <div
       className="footer flex flex-col"
-      style={{ marginTop: "auto", backgroundColor: "#e0e0e0" }}
+      style={{
+        marginTop: "auto",
+        borderTop: "1px solid #e0e0e0",
+        backgroundColor: "#f8f8f8",
+        padding: "20px 0",
+        boxShadow: "0 2px 4px rgba(0, 0, 0, 1)",
+      }}
     >
       <Container maxWidth="x-lg" className="bd">
         <div className="footer-content grid grid-cols-5 gap-4 p-4 ">
@@ -62,7 +68,7 @@ export default function Footer() {
           </div>
         </div>
         <hr className="border-t border-gray-300" />
-        <div className="flex justify-around items-center p-4 bg-gray-200">
+        <div className="flex justify-around items-center p-4">
           <div>All Rights Reserved @ Company 2023</div>
 
           <div className="flex gap-4 justify-center items-center">

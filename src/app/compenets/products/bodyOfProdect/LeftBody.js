@@ -27,8 +27,16 @@ export default function LeftBody({ count, setCount }) {
   return (
     <div className="grid grid-cols-4 gap-4 ">
       <div
-        className="col-span-4"
-        style={{ height: "500px", backgroundColor: "#e0e0e0" }}
+        className="col-span-4
+          transition-all duration-300
+            hover:scale-101"
+        style={{
+          height: "500px",
+          transition: "transform 0.3s ease",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          border: "1px solid #ddd",
+          borderRadius: "10px",
+        }}
       >
         <img
           className="justify-self-center align-middle"
@@ -39,34 +47,48 @@ export default function LeftBody({ count, setCount }) {
 
       {products.map((product) => (
         <div
-          className=" max-h-48 cursor-pointer flex justify-center items-center bg-size-contain bg-no-repeat bg-center"
+          className=" 
+           cursor-pointer
+           hover:bg-[#f9f9f9]
+           transition-all duration-300
+            hover:scale-105
+           bg-position-center
+           bg-no-repeat
+           h-50
+           bg-contain
+           bg-center"
           key={product.id}
           style={{
-            backgroundColor: "#e0e0e0",
+            border: "1px solid #ddd",
+
             border: product.id === count ? "solid 2px black" : "",
+            backgroundImage: `url(${product.src})`,
+            transition: "transform 0.3s ease",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            borderRadius: "10px",
 
             display:
               product.id > count + 3 || product.id < count ? "none" : "block",
           }}
           onClick={() => setCount(product.id)}
-        >
-          <img src={product.src} />
-        </div>
+        ></div>
       ))}
       <div className="flex gap-2 col-span-4">
         <Button
-          className=""
-          style={{ color: "black" }}
+          variant="outlined"
+          size="large"
+          style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}
           onClick={handleClickLeft}
         >
-          Left
+          ←
         </Button>
         <Button
-          className=""
-          style={{ color: "black" }}
+          variant="outlined"
+          size="large"
+          style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}
           onClick={handleClickRight}
         >
-          Right
+          →
         </Button>
       </div>
     </div>

@@ -35,7 +35,6 @@
     justify-items: center;
   }
 }
-
 .Button {
   background-color: #4caf50;
   color: white;
@@ -46,19 +45,7 @@
   margin-right: 20px;
 }
 .Button:hover {
-  background-color: #a9a9a9;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 1s ease-in-out;
+  background-color: #e0e0e0;
 }
 a:hover {
   text-decoration: none;

@@ -70,28 +70,31 @@ export default function Itemnew() {
 
   const items = itemstate.map((item) => {
     return (
-      <div className="newitem" key={item.id}>
+      <div className="newitem hover:[]" key={item.id}>
         <div
           style={{
-            maxWidth: "250px",
-            height: "250px",
-            backgroundColor: "#e0e0e0",
+            backgroundPosition: "center",
+            backgroundSize: "contain",
+            height: "300px",
             backgroundImage: `url(${item.image})`,
-            backgroundPosition: "right bottom",
-            backgroundSize: "250px 250px",
             backgroundRepeat: "no-repeat",
             borderRadius: "10px",
             cursor: "pointer",
             transition: "transform 0.3s ease",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            border: "1px solid #ddd",
+            borderRadius: "10px",
           }}
         ></div>
-        <div className="flex flex-col items-center justify-center">
+        <div
+          className="flex 
+          items-center justify-between"
+        >
           <p
             style={{
               fontSize: "20px",
               fontWeight: "bold",
               color: "#333",
-              textAlign: "center",
             }}
           >
             {item.name}
@@ -100,7 +103,6 @@ export default function Itemnew() {
             style={{
               fontSize: "16px",
               color: "#666",
-              textAlign: "center",
             }}
           >
             {item.price}
@@ -121,7 +123,7 @@ export default function Itemnew() {
           textAlign: "center",
         }}
       >
-        new arrival items
+        New Arrival Items
         <hr
           style={{
             width: "11%",
@@ -130,7 +132,7 @@ export default function Itemnew() {
         />
       </h1>
       <div
-        className="newItem grid grid-cols-4 grid-rows-2 gap-5"
+        className="newItem grid grid-cols-4 gap-5"
         style={{ marginTop: "50px" }}
       >
         {items}

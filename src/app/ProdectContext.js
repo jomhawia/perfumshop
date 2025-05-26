@@ -11,6 +11,7 @@ export const ProductProvider = ({ children }) => {
       description: "Deep, woody scent perfect for evening wear.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/OUD-removebg-preview.png",
+      dateToAdd: "2025-5-15",
     },
     {
       id: 1,
@@ -19,6 +20,7 @@ export const ProductProvider = ({ children }) => {
       description: "long-lasting scent, perfect for day and night wear.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/SAUVAGE-removebg-preview.png",
+      dateToAdd: "2022-10-07",
     },
     {
       id: 2,
@@ -27,6 +29,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/YOU-removebg-preview.png",
+      dateToAdd: "2023-11-09",
     },
 
     {
@@ -36,6 +39,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/BOWMORE-removebg-preview.png",
+      dateToAdd: "2023-7-17",
     },
     {
       id: 4,
@@ -44,6 +48,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/blue_chanel-removebg-preview.png",
+      dateToAdd: "2020-10-01",
     },
     {
       id: 5,
@@ -52,6 +57,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/DOLCE-removebg-preview.png",
+      dateToAdd: "2023-12-5",
     },
 
     {
@@ -61,6 +67,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/ARMANI-removebg-preview.png",
+      dateToAdd: "2025-10-01",
     },
     {
       id: 7,
@@ -69,6 +76,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/Prageesh-removebg-preview.png",
+      dateToAdd: "2025-6-08",
     },
 
     {
@@ -78,6 +86,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/KAAL-removebg-preview.png",
+      dateToAdd: "2025-9-18",
     },
 
     {
@@ -87,6 +96,7 @@ export const ProductProvider = ({ children }) => {
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
       src: "/image/perfume/rebert-removebg-preview.png",
+      dateToAdd: "2025-8-19",
     },
   ]);
   return (

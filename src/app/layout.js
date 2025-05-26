@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Footer from "./compenets/Footer";
 import { ProductProvider } from "./ProdectContext";
 import { CartProvider } from "./CartsProdectContext";
+import { NewsProvider } from "./NewsContext";
 
 const theme = createTheme({
   palette: {
@@ -31,11 +32,13 @@ export default function RootLayout({ children }) {
       <body>
         <ProductProvider>
           <CartProvider>
-            <ThemeProvider theme={theme}>
-              <Header />
-              {children}
-              <Footer />
-            </ThemeProvider>
+            <NewsProvider>
+              <ThemeProvider theme={theme}>
+                <Header />
+                {children}
+                <Footer />
+              </ThemeProvider>
+            </NewsProvider>
           </CartProvider>
         </ProductProvider>
       </body>

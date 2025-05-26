@@ -15,7 +15,7 @@ import RightDrawer from "@/app/RightDrawer";
 
 export default function Header() {
   return (
-    <div>
+    <div className="bg-[#f8f8f8] ">
       <div
         className="header flex justify-center items-center "
         style={{ marginTop: "10px" }}
@@ -141,15 +141,17 @@ export default function Header() {
             PRODUCT
           </Button>
         </Link>
-        <Button
-          className="Button"
-          style={{
-            margin: "10px",
-            color: "#000",
-          }}
-        >
-          NEWS
-        </Button>
+        <Link href={`/Newes`}>
+          <Button
+            className="Button"
+            style={{
+              margin: "10px",
+              color: "#000",
+            }}
+          >
+            NEWS
+          </Button>
+        </Link>
         <Button
           className="Button"
           style={{

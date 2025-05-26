@@ -15,7 +15,7 @@ export default function Prodect() {
         <HeaderOfProdect />
       </div>
       <Container>
-        <div className="flex gap-10 mt-20">
+        <div className="flex gap-10 mt-10">
           <div className="w-1/2">
             <LeftBody count={count} setCount={setCount} />
           </div>
