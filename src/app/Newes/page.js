@@ -9,10 +9,7 @@ export default function News() {
   return (
     <div>
       <HeaderOfNewes />
-      <Container
-        maxWidth="lg"
-        className="mt-10 flex items-start gap-10 justify-center"
-      >
+      <Container className=" ">
         <BodyOfNews />
         <FooterOfNews />
       </Container>

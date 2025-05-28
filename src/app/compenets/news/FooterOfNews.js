@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 
 export default function FooterOfNews() {
   return (
-    <div className="">
-      <div className="flex flex-col items-start gap-5 border p-5">
+    <div className="self-center">
+      <div className="flex flex-col items-center gap-5  p-5">
         <div className="font-bold text-2xl">Search</div>
         <div className="flex items-center justify-center ">
           <input

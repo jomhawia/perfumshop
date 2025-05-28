@@ -1,10 +1,14 @@
 "use client";
 import Button from "@mui/material/Button";
 import { useContext } from "react";
+import { useState } from "react";
 import { ProductContext } from "@/app/ProdectContext";
 import AlertCart from "./AlertCart";
-
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import PinterestIcon from "@mui/icons-material/Pinterest";
+import TitleIcon from "@mui/icons-material/Title";
 export default function RightBody({ count, setCount }) {
+  const [numberOfElement, setnumberOfElement] = useState(1);
   const products = useContext(ProductContext);
   return (
     <div className="flex flex-col gap-2">
@@ -12,9 +16,9 @@ export default function RightBody({ count, setCount }) {
         {products[count].title} : {products[count].description}{" "}
       </div>
       <div className="flex gap-1 justify-start items-end">
-        <p className="text-2xl">Price:</p>
-        <p className="text-2xl">${products[count].price}</p>
-        <p className="line-through">$21.00</p>
+        <p className="text-3xl font-bold ">Price:</p>
+        <p className="text-3xl font-bold">${products[count].price}</p>
+        <p className="line-through text-2xl">$21.00</p>
         <p className="" style={{ backgroundColor: "#f9f9f9" }}>
           Save -10%
         </p>
@@ -38,33 +42,65 @@ export default function RightBody({ count, setCount }) {
         </div>
       </div>
       <hr />
-      <div className="grid grid-cols-3 gap-1">
-        <div className="flex justify-start align-middle w-20">
-          <div>-</div>
-          <input type="text" className="w-15" />
-          <div>+</div>
+      <div className="grid grid-cols-3 gap-2 p-5">
+        <div className="flex justify-center  align-middle ">
+          <div
+            className="border  border-gray-300 text-3xl p-3"
+            onClick={() =>
+              setnumberOfElement((prev) => (prev > 1 ? prev - 1 : 1))
+            }
+            style={{ cursor: "pointer", userSelect: "none" }}
+          >
+            -
+          </div>
+          <div className=" border text-2xl border-gray-300 p-3 align-middle">
+            {numberOfElement}
+          </div>
+          <div
+            className=" border text-3xl border-gray-300 p-3"
+            onClick={() => setnumberOfElement((prev) => prev + 1)}
+            style={{ cursor: "pointer", userSelect: "none" }}
+          >
+            +
+          </div>
         </div>
-        <AlertCart count={count} />{" "}
-        <Button
-          className="w-30"
-          style={{ color: "black", border: "1px solid black" }}
-        >
-          Buy it now
-        </Button>
-        <p className="w-30">Add to wishlist</p>
-        <p className="w-30">Compare</p>
-        <p className="w-30">Ask about this product</p>
+        <AlertCart index={count} quantity={numberOfElement} />
+        <Button variant="contained">Buy it now</Button>
+        <div className=" hover:bg-[#f9f9f9]">
+          <Button style={{ fontSize: "12px" }} variant="text" color="black">
+            Add to wishlist
+          </Button>
+        </div>
+        <div className=" hover:bg-[#f9f9f9]">
+          <Button style={{ fontSize: "12px" }} variant="text" color="black">
+            Compare
+          </Button>
+        </div>
+        <div className=" hover:bg-[#f9f9f9]">
+          <Button style={{ fontSize: "11px" }} variant="text" color="black">
+            Ask about this product
+          </Button>
+        </div>
       </div>
       <hr />
 
-      <div className="flex gap-2 ">
+      <div className="flex gap-3">
         <div>share:</div>
-        <div>Facebook</div>
-        <div>Twitter</div>
-        <div>Pinterest</div>
+        <div className="flex justify-center items-center gap-1">
+          <FacebookOutlinedIcon />
+          Facebook
+        </div>
+        <div className="flex justify-center items-center gap-1">
+          <TitleIcon />
+          Twitter
+        </div>
+        <div className="flex justify-center items-center gap-1">
+          <PinterestIcon />
+          Pinterest
+        </div>
       </div>
       <hr />
-      <div>
+      <div className="flex flex-col gap-2">
         <div>Guaranteed Safe Checkout</div>
         <div className="flex justify-start align-middle gap-1">
           <div className=" w-13 border p-1  border-gray-400">

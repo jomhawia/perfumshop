@@ -9,7 +9,7 @@ export const ProductProvider = ({ children }) => {
       title: "OUD",
       price: 220,
       description: "Deep, woody scent perfect for evening wear.",
-      detail: "long-lasting scent, perfect for day and night wear.",
+      detail: "lasdasddddddddddddddddddddasdasd.",
       src: "/image/perfume/OUD-removebg-preview.png",
       dateToAdd: "2025-5-15",
     },
@@ -18,9 +18,10 @@ export const ProductProvider = ({ children }) => {
       title: "SAUVAGE",
       price: 220,
       description: "long-lasting scent, perfect for day and night wear.",
-      detail: "long-lasting scent, perfect for day and night wear.",
+      detail:
+        "long-lasting scent, perfect for day and sdfsdfsdaaaaaanight wear.",
       src: "/image/perfume/SAUVAGE-removebg-preview.png",
-      dateToAdd: "2022-10-07",
+      dateToAdd: "2025-10-07",
     },
     {
       id: 2,

@@ -20,12 +20,5 @@ export default function BodyOfNews() {
       />
     </div>
   ));
-  return (
-    <div
-      className="flex flex-col items-center gap-10 w-full p-5 
-    "
-    >
-      {latestNews}
-    </div>
-  );
+  return <div className="grid grid-cols-2  gap-3 p-5 ">{latestNews}</div>;
 }

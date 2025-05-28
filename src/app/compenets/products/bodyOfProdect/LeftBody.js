@@ -32,7 +32,6 @@ export default function LeftBody({ count, setCount }) {
             hover:scale-101"
         style={{
           height: "500px",
-          transition: "transform 0.3s ease",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
           border: "1px solid #ddd",
           borderRadius: "10px",
@@ -63,7 +62,6 @@ export default function LeftBody({ count, setCount }) {
 
             border: product.id === count ? "solid 2px black" : "",
             backgroundImage: `url(${product.src})`,
-            transition: "transform 0.3s ease",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             borderRadius: "10px",
 
