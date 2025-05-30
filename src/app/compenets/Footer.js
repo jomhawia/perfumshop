@@ -17,7 +17,7 @@ export default function Footer() {
       }}
     >
       <Container maxWidth="x-lg" className="bd">
-        <div className="footer-content grid grid-cols-5 gap-4 p-4 ">
+        <div className=" footer footer-content grid grid-cols-5 gap-4 p-4 ">
           <div className=" flex flex-col gap-4">
             <div>MY ACCOOUT</div>
             <p>My account</p>
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
         </div>
         <hr className="border-t border-gray-300" />
-        <div className="flex justify-around items-center p-4">
+        <div className="lastFooter flex justify-around items-center p-4">
           <div>All Rights Reserved @ Company 2023</div>
 
           <div className="flex gap-4 justify-center items-center">

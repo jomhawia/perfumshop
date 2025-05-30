@@ -8,7 +8,7 @@ import { ProductContext } from "@/app/ProdectContext";
 
 export default function CompletBody({ count, setCount }) {
   const products = useContext(ProductContext);
-  const [data, setDate] = useState();
+  const [data, setDate] = useState(0);
   function handlDataToDescription() {
     setDate(0);
   }
@@ -16,7 +16,7 @@ export default function CompletBody({ count, setCount }) {
     setDate(1);
   }
   return (
-    <div className="mt-20 flex flex-col gap-5">
+    <div className="mt-10 flex flex-col gap-5">
       <div>
         <ButtonGroup variant="outlined" aria-label="Basic button group">
           <Button

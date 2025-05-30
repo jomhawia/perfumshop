@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import "../cssfile/slider.css";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@mui/material/Container";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";

@@ -3,7 +3,7 @@
 import * as React from "react";
 import "../globals.css";
 import "../cssfile/header.css";
-import Menu from "./Menu";
+import LeftDrawer from "../LeftDrawer";
 import TextField from "@mui/material/TextField";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -11,21 +11,23 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import Link from "next/link";
+
 import RightDrawer from "@/app/RightDrawer";
 
 export default function Header() {
   return (
     <div className="bg-[#f8f8f8] ">
-      <div
-        className="header flex justify-center items-center "
-        style={{ marginTop: "10px" }}
-      >
-        <img
-          src="/image/perfumelogo-removebg-preview.png"
-          alt="logo"
-          width="100px"
-          height="100px"
-        />
+      <div className="header flex justify-center items-center ">
+        <div
+          style={{
+            backgroundImage: `url(/image/perfumelogo-removebg-preview.png)`,
+            backgroundSize: "contain",
+            height: "100px",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100px",
+          }}
+        ></div>
         <div
           className="searchandphone"
           style={{
@@ -93,9 +95,14 @@ export default function Header() {
         </div>
       </div>
       <hr style={{ color: "#eeeeee" }} />
-      {/* <Menu /> */}
+      <div className="">
+        <div className="MENU">
+          <div>MENU</div>
+          <LeftDrawer />
+        </div>
+      </div>
       <div
-        className="headerButton hidden md:flex"
+        className="headerButton flex justify-center items-center"
         style={{
           justifyContent: "center",
           alignItems: "center",

@@ -1,3 +1,16 @@
+@media (min-width: 601px) and (max-width: 1024px) {
+  .newItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .newItem {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 .newitem:hover {
   transform: scale(1.05);
   transition: transform 1s ease-in-out;

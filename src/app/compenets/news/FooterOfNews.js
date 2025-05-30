@@ -8,10 +8,10 @@ export default function FooterOfNews() {
         <div className="font-bold text-2xl">Search</div>
         <div className="flex items-center justify-center ">
           <input
-            type="text"
+            type="search"
             placeholder="Search our store"
             className="
-            w-80 h-10 p-1 border"
+            w-80 h-10 p-3 border"
           />
           <Button
             variant="contained"

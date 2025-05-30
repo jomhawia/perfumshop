@@ -1,13 +1,28 @@
+@media (min-width: 601px) and (max-width: 1024px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .lastFooter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .lastFooter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
 p {
   font-family: "Arial, sans-serif";
   margin: 0;
   padding: 10px 0;
 }
-/* p:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-p:hover::before {
-  content: "// ";
-} */

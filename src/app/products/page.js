@@ -26,7 +26,7 @@ export default function Prodect() {
         <div>
           <CompletBody count={count} setCount={setCount} />
         </div>
-        <div>
+        <div className="mt-10">
           <LatestNews />
         </div>
       </Container>

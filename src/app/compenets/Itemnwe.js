@@ -1,74 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useContext } from "react";
 import "/src/app/globals.css";
 import "/src/app/cssfile/itemnew.css";
 import "../cssfile/itemnew.css";
+import { ProductContext } from "../ProdectContext";
 
 export default function Itemnew() {
-  const [itemstate, setItem] = useState([
-    {
-      id: 1,
-      name: "ARMANI",
-      price: "$150",
-      baeckgroundColor: "white",
-      image: "/image/perfume/ARMANI-removebg-preview.png",
-    },
-    {
-      id: 2,
-      name: "BOWMORE",
-      price: "$220",
-      baeckgroundColor: "white",
+  const products = useContext(ProductContext);
 
-      image: "/image/perfume/BOWMORE-removebg-preview.png",
-    },
-    {
-      id: 3,
-      name: "DOLCE",
-      price: "$330",
-      baeckgroundColor: "white",
-
-      image: "/image/perfume/DOLCE-removebg-preview.png",
-    },
-    {
-      id: 4,
-      name: "KAAL",
-      price: "$130",
-      baeckgroundColor: "white",
-
-      image: "/image/perfume/KAAL-removebg-preview.png",
-    },
-    {
-      id: 5,
-      name: "Prageesh",
-      price: "$180",
-      baeckgroundColor: "white",
-      image: "/image/perfume/Prageesh-removebg-preview.png",
-    },
-    {
-      id: 6,
-      name: "REBERT",
-      price: "$80",
-      baeckgroundColor: "white",
-      image: "/image/perfume/rebert-removebg-preview.png",
-    },
-    {
-      id: 7,
-      name: "YOU",
-      price: "$100",
-      baeckgroundColor: "white",
-      image: "/image/perfume/YOU-removebg-preview.png",
-    },
-    {
-      id: 8,
-      name: "SAUVAGE",
-      price: "$300",
-      baeckgroundColor: "white",
-      image: "/image/perfume/SAUVAGE-removebg-preview.png",
-    },
-  ]);
-
-  const items = itemstate.map((item) => {
+  const items = products.map((item) => {
     return (
       <div className="newitem hover:[]" key={item.id}>
         <div
@@ -76,7 +17,7 @@ export default function Itemnew() {
             backgroundPosition: "center",
             backgroundSize: "contain",
             height: "300px",
-            backgroundImage: `url(${item.image})`,
+            backgroundImage: `url(${item.src})`,
             backgroundRepeat: "no-repeat",
             borderRadius: "10px",
             cursor: "pointer",
@@ -97,7 +38,7 @@ export default function Itemnew() {
               color: "#333",
             }}
           >
-            {item.name}
+            {item.title}
           </p>
           <p
             style={{

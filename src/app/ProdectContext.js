@@ -76,7 +76,7 @@ export const ProductProvider = ({ children }) => {
       price: 220,
       description: "Fresh, bold fragrance with citrus and amber notes.",
       detail: "long-lasting scent, perfect for day and night wear.",
-      src: "/image/perfume/Prageesh-removebg-preview.png",
+      src: "/image/perfume/clear_Glass_Square_Perfume_Bottle_Mockup-removebg-preview.png",
       dateToAdd: "2025-6-08",
     },
 
