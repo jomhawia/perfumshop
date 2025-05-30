@@ -1,4 +1,6 @@
 "use client";
+
+import "../cssfile/prodects.css";
 import HeaderOfProdect from "../compenets/products/HeaderOfProdect";
 import LeftBody from "../compenets/products/bodyOfProdect/LeftBody";
 import RightBody from "../compenets/products/bodyOfProdect/RightBody";
@@ -15,11 +17,11 @@ export default function Prodect() {
         <HeaderOfProdect />
       </div>
       <Container>
-        <div className="flex gap-10 mt-10">
-          <div className="w-1/2">
+        <div className="prodects flex gap-10 mt-10">
+          <div className="LeftBody w-1/2">
             <LeftBody count={count} setCount={setCount} />
           </div>
-          <div className="w-1/2">
+          <div className="RightBody w-1/2">
             <RightBody count={count} setCount={setCount} />
           </div>
         </div>

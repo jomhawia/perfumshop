@@ -1,0 +1,27 @@
+@media (min-width: 1025px) and (max-width: 1600px) {
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .prodects {
+    display: flex;
+    flex-direction: column;
+  }
+  .RightBody {
+    width: 100%;
+  }
+  .LeftBody {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .prodects {
+    display: flex;
+    flex-direction: column;
+  }
+  .RightBody {
+    width: 100%;
+  }
+  .LeftBody {
+    width: 100%;
+  }
+}

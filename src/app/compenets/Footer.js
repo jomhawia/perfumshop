@@ -67,10 +67,7 @@ export default function Footer() {
           </div>
         </div>
         <hr className="border-t border-gray-300" />
-        <div
-          style={{ display: "none" }}
-          className="lastFooter flex justify-around items-center p-4"
-        >
+        <div className="lastFooter flex justify-around items-center p-4">
           <div>All Rights Reserved @ Company 2023</div>
 
           <div className="lastlat flex gap-4 justify-center items-center">

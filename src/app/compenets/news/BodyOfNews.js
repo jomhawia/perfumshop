@@ -1,4 +1,5 @@
 "use client";
+import "@/app/cssfile/news.css";
 import Latestnew from "../latest new";
 import { useContext } from "react";
 import { NewsContext } from "@/app/NewsContext";
@@ -20,5 +21,5 @@ export default function BodyOfNews() {
       />
     </div>
   ));
-  return <div className="grid grid-cols-2  gap-3 p-5 ">{latestNews}</div>;
+  return <div className="news grid grid-cols-3  gap-3 p-5 ">{latestNews}</div>;
 }

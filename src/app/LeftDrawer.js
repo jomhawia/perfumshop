@@ -21,7 +21,7 @@ export default function LeftDrawer() {
 
   const list = (
     <Box
-      sx={{ width: 350 }}
+      sx={{ width: 300 }}
       role="presentation"
       onClick={toggleDrawer("left", false)}
       onKeyDown={toggleDrawer("left", false)}
