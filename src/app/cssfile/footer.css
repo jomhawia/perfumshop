@@ -6,6 +6,7 @@
   .lastFooter {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
@@ -17,7 +18,11 @@
   .lastFooter {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
     flex-wrap: wrap;
+  }
+  .lastlat {
   }
 }
 

@@ -59,7 +59,6 @@ export default function Footer() {
             <p>
               {" "}
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmo incididunt ut labore et dolore
             </p>
             <p>Brooklyn, New York, United States</p>
             <p>+0123-456789</p>
@@ -68,10 +67,13 @@ export default function Footer() {
           </div>
         </div>
         <hr className="border-t border-gray-300" />
-        <div className="lastFooter flex justify-around items-center p-4">
+        <div
+          style={{ display: "none" }}
+          className="lastFooter flex justify-around items-center p-4"
+        >
           <div>All Rights Reserved @ Company 2023</div>
 
-          <div className="flex gap-4 justify-center items-center">
+          <div className="lastlat flex gap-4 justify-center items-center">
             <Button variant="secondary" className="ml-auto mr-4">
               My account
             </Button>
