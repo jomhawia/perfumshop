@@ -119,15 +119,17 @@ export default function Header() {
             HOME
           </Button>
         </Link>
-        <Button
-          className="Button"
-          style={{
-            margin: "10px",
-            color: "#000",
-          }}
-        >
-          ABOUT US
-        </Button>
+        <Link href={`/aboutUs`}>
+          <Button
+            className="Button"
+            style={{
+              margin: "10px",
+              color: "#000",
+            }}
+          >
+            ABOUT US
+          </Button>
+        </Link>
         <Button
           className="Button"
           style={{
